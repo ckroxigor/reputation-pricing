@@ -36,12 +36,12 @@ function init(hotels) {
 
 	//Start map
 	var map = L.map('map').setView([lat, lon], 13);
-	var baseLayer = L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+	var baseLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoic21hcnRtb25rZXkiLCJhIjoiY2lqems0ZnkxMnFqdXYybTV5YzNtZnNvYiJ9.70KjcDFEnB_z3Cpg3B4SoQ', {
 		maxZoom: 18,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		id: 'examples.map-i86knfo3'
+		id: 'mapbox.streets'
 	}).addTo(map);
 	//Compute the mean score
 	mean_score = avgScore(hotels);
